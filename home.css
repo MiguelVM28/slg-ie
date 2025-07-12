@@ -1,0 +1,461 @@
+/* ===================== VARIABLES ===================== */
+:root{
+  --color-primary:#1a3c6d;      /* azul oscuro */
+  --color-secondary:#007bff;    /* azul claro */
+  --color-accent:#e74c3c;       /* rojo/naranja */
+  --color-brand-red:#CA1E23;    /* rojo institucional */
+  --color-overlay:rgba(25,18,102,0.65); /* morado overlay */
+  --color-text-light:#fff;
+  --color-text-dark:#333;
+}
+
+/* ===================== REGLAS GENERALES ===================== */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+  font-family:sans-serif;
+  line-height:1.5;
+}
+
+/* Contenedor genérico */
+.container{
+  max-width:1300px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* ===================== TOP BAR ===================== */
+.header{background:white;
+    width:100%;
+}
+.top-bar{
+  background:#022953;
+  color:white;
+  padding:10px 0;
+  text-align:center;
+}
+.container{
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar{
+    padding:2px
+}
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:30px;
+  position:relative;
+}
+.logo-centered{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:10px 40px;
+}
+.logo-centered img{
+    height:50px;
+    margin-bottom:8px
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    transition:max-height .4s ease
+}
+.nav-links a{
+    color:#000;
+    text-decoration:none;
+    font-weight:700
+}
+.nav-links a:hover{
+    color:var(--color-secondary)
+}
+
+/* Hamburguesa */
+.hamburger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+    margin-left:auto;
+    z-index:1001
+}
+.hamburger span{
+    height:3px;
+    width:25px;
+    background:var(--color-primary);
+    margin:4px 0;
+    border-radius:2px;
+    transition:.4s
+}
+
+/* Dropdown */
+.dropdown{
+    position:relative
+}
+.dropdown-content{
+  display:none;
+  position:absolute;
+  min-width:160px;
+  background:var(--color-primary);
+  box-shadow:0 8px 16px rgba(0,0,0,.2);
+  z-index:1;
+  border-top:3px solid var(--color-secondary);
+}
+.dropdown-content a{
+    color:#fff;
+    padding:12px 16px;
+    display:block;
+    text-align:left
+}
+.dropdown-content a:hover{
+    background:rgba(255,255,255,.1);
+    color:var(--color-secondary)
+}
+.dropdown:hover .dropdown-content{
+    display:block
+}
+
+/* ===================== CARRUSEL ===================== */
+.carousel{
+    position:relative;
+    width:100%;aspect-ratio:16/6;
+    overflow:hidden
+}
+.carousel img{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1s ease-in-out;
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+.carousel img.active{
+    opacity:1;
+    position:relative
+}
+
+/* ===================== WHY CHOOSE US ===================== */
+.why-choose-us
+{padding:60px 0;
+    background:#f8f8f8;
+    text-align:center
+}
+.why-choose-us h2{
+    color:var(--color-primary);
+    text-align:left
+}
+.reasons-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:20px
+}
+.reason-item{
+  background:#fff;
+  padding:30px;
+  border-radius:8px;
+  box-shadow:0 4px 8px rgba(0,0,0,.1);
+  flex:1;
+  min-width:190px;
+  max-width:220px;
+  text-align:center
+}
+.reason-item img{
+    width:80px;
+    height:80px;
+    margin-bottom:20px
+}
+.reason-item p{
+    font-size:1.1em;
+    color:var(--color-text-dark);
+    font-weight:700
+}
+
+/* ===================== COMPLEMENTARY SERVICES ===================== */
+.complementary-services{
+    padding:60px 0;
+    background:#fff;
+    position:relative;
+    overflow:hidden;
+    color:#000
+}
+.complementary-services .container{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:1
+}
+.services-content{
+    flex:1;
+    min-width:300px;
+    text-align:left;
+    padding:0 20px
+}
+.services-content h2{
+    font-size:2em;
+    margin-bottom:30px
+}
+.service-item{
+    display:flex;
+    align-items:flex-start;
+    gap:35px;
+    margin-bottom:28px
+}
+.service-item img{
+    width:50px;
+    height:50px;
+    flex-shrink:0
+}
+.service-text{
+    flex-grow:1
+}
+.service-item h3{margin:0 0 5px 0}
+.service-item p{font-size:.9em;
+    line-height:1.5;
+    color:#666}
+.admission-process-button{
+  background:red;
+  color:#fff;
+  padding:15px 30px;
+  border:none;
+  border-radius:5px;
+  font-size:1.1em;
+  cursor:pointer;
+  transition:.3s
+}
+.admission-process-button:hover{background:#b30000}
+.services-image{flex:1;
+    min-width:400px;
+    text-align:center}
+.services-image img{max-width:100%;
+    border-radius:8px}
+.complementary-services::before{
+  content:'';
+  position:absolute;
+  left:40%;
+  transform:translateX(300px);
+  width:435px;
+  height:100%;
+  background:blue;
+  z-index:0;
+}
+.complementary-services::after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:20%;
+  width:27%;
+  height:9%;
+  background:red;
+  z-index:0
+}
+
+/* ===================== STATS SECTION ===================== */
+.stats-section{
+  position:relative;
+  background:url('slg.png') center/cover no-repeat;
+  min-height:280px;
+  color:#fff;
+  overflow:hidden;
+  padding:80px 20px;
+}
+.stats-overlay{position:absolute;
+    inset:0;
+    background:var(--color-overlay);
+    backdrop-filter:blur(2px)}
+.stats-wrapper{
+  position:relative;      /* sobre el overlay */
+  max-width:1400px;
+  margin:auto;
+  display:flex;
+  gap:60px;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  text-align:center;
+}
+.stat-item{flex:1 1 220px}
+.icon-circle{
+  width:150px;
+  height:150px;
+  margin:0 auto 25px;
+  background:var(--color-brand-red);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+}
+.icon-circle i{font-size:64px}
+.stat-title{font-weight:800;
+    font-size:28px;
+    line-height:1.3;
+    margin-bottom:15px}
+.stat-value{font-weight:800;
+    font-size:48px}
+
+/* ---------- Responsive ---------- */
+@media(max-width:768px){
+  .stats-wrapper{gap:40px}
+  .icon-circle{width:120px;
+    height:120px}
+  .icon-circle i{font-size:52px}
+  .stat-title{font-size:22px}
+  .stat-value{font-size:40px}
+}
+@media(max-width:480px){
+  .stats-wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:35px;
+  }
+  .icon-circle{width:100px;
+    height:100px}
+  .icon-circle i{font-size:40px}
+  .stat-title{font-size:20px}
+  .stat-value{font-size:34px}
+}
+
+/* ===================== STUDENT PREFERENCES ===================== */
+.student-preferences{padding:60px 0;
+    background:#f8f8f8;
+    text-align:center}
+.student-preferences h2{color:var(--color-primary);
+    font-size:2.5em;
+    margin-bottom:34px}
+.university-logos{display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px}
+.university-logos img{height:70px;
+    object-fit:contain;
+    max-width:150px}
+
+/* ===================== FOOTER ===================== */
+.footer{background:var(--color-primary);
+    color:#fff;
+    padding:50px 0;
+    position:relative}
+.footer 
+.container{display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px}
+.footer-left,
+.footer-middle,
+.footer-right{flex:1;
+    min-width:280px}
+.footer-left img{height:70px;
+    margin-bottom:20px}
+.footer h3{margin-bottom:20px;
+    border-bottom:2px solid var(--color-secondary);
+    display:inline-block;
+    padding-bottom:10px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:10px}
+.footer ul li a{color:#fff;
+    text-decoration:none;
+    transition:.3s}
+.footer ul li a:hover{color:var(--color-secondary)}
+.footer-right p{margin-bottom:10px;
+    display:flex;
+    align-items:center}
+.footer-right i{margin-right:10px;
+    color:var(--color-secondary)}
+.social-media-footer a{color:#fff;
+    font-size:1.8em;
+    margin-right:15px;
+    transition:.3s}
+.social-media-footer a.facebook:hover{color:#3b5998}
+.social-media-footer a.instagram:hover{color:#E1306C}
+.social-media-footer a.youtube:hover{color:#FF0000}
+
+/* WhatsApp flotante */
+.whatsapp-float{
+  position:fixed;
+  bottom:40px;
+  right:40px;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  box-shadow:2px 2px 3px #999;
+  z-index:1000;
+  text-decoration:none
+}
+.whatsapp-float:hover{background:#128C7E}
+
+/* ===================== MEDIA QUERIES GENERALES ===================== */
+@media(max-width:992px){
+  .hero .container,
+  .complementary-services .container,
+  .footer .container{flex-direction:column;
+    text-align:center}
+  .navbar .container{flex-direction:row;
+    gap:10px}
+  .hamburger{display:flex}
+  .nav-links{
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100vw;
+    background:#fff;
+    max-height:0;
+    overflow:hidden;
+    box-shadow:0 8px 16px rgba(0,0,0,.08);
+    z-index:1000
+  }
+  .nav-links.open{max-height:500px;
+    padding:10px 0;
+    border-bottom:1px solid #eee}
+  .nav-links li{padding:10px 0;
+    text-align:center}
+  .dropdown-content{position:static;
+    box-shadow:none;
+    min-width:100%;
+    border-top:none;
+    background:var(--color-primary)}
+  .reasons-grid,.university-logos{flex-direction:column;
+    align-items:center}
+  .reason-item{width:90%;
+    max-width:400px}
+}
+@media(max-width:576px){
+  h1{font-size:2em} 
+  h2{font-size:1.3em}
+  .cta-button,
+  .admission-process-button{padding:10px 15px;
+    font-size:.95em}
+  .whatsapp-float{width:45px;
+    height:45px;
+    bottom:15px;
+    right:15px;
+    font-size:22px}
+  .logo-centered img{height:35px}
+  .top-bar .container{flex-direction:column;
+    gap:8px;
+    font-size:.8em}
+  .footer .container{flex-direction:column;
+    gap:10px}
+}

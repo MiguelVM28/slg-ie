@@ -1,0 +1,158 @@
+/* ╔════════════════════════════════════════════╗
+   ║        HERO  —  NIVEL SECUNDARIA          ║
+   ╚════════════════════════════════════════════╝ */
+.hero-admision{
+    width:100%;
+    background:#123b6e;
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    margin:0 auto;
+    padding:0;
+    overflow:hidden;
+}
+.hero-admision .hero-content{
+    display:flex;
+    width:100%;
+    max-width:1400px;
+    min-height:300px;
+}
+.hero-admision .hero-bg{
+    flex:1;
+    background:
+        url("../img/bg-formas.svg") center/cover no-repeat,
+        #123b6e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 0;
+}
+.hero-admision .hero-bg h1{
+    color:#fff;
+    font:700 3.2rem/1.2 "Georgia",serif;
+    margin:0;
+    text-align:center;
+}
+.hero-admision.hero-admision .hero-img{
+    flex:1;
+    background:#f3f3f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.hero-admision .hero-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+@media(max-width:900px){
+    .hero-admision .hero-content{flex-direction:column;}
+    .hero-admision .hero-bg,
+    .hero-admision .hero-img{padding:20px;}
+    .hero-admision .hero-bg h1{font-size:2rem;}
+    .hero-admision .hero-img img{max-height:180px;}
+}
+
+/* ------------- VARIABLES RÁPIDAS ------------- */
+:root{
+  --azul:#123b6e;
+  --beige:#faf7f3;
+  --gris:#666;
+  --font-title:'Georgia',serif;
+  --font-base:'Segoe UI',sans-serif;
+}
+
+/* ------------- RESET BÁSICO ------------- */
+body{margin:0;font-family:var(--font-base);color:#222;line-height:1.6;background:var(--beige);}
+h2{font-family:var(--font-title);font-weight:700;margin:0 0 18px}
+.container{max-width:1140px;margin:0 auto;padding:15px 40px;box-sizing:border-box}
+
+/* ------------- PASO 1 ------------- */
+.paso-1 h2{font-size:3.6rem}
+.paso-1 .sub{max-width:900px;font-size:1.2rem;color:var(--gris)}
+.paso-1 .nota{font-weight:600;color:var(--gris);margin-top:60px}
+
+/* ------------- PASO 2 (Acordeón) ------------- */
+.paso-2{background:#fff}
+.accordion{margin-top:0px}
+.acc-item{border:1px solid #d6d8de;margin-bottom:30px;background:#fbfcff}
+.acc-header{
+  display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+  padding:22px 28px;
+}
+.acc-header h3{margin:0;font-size:2rem;font-family:var(--font-title)}
+.acc-toggle{
+  background:none;border:none;font-size:1.4rem;color:var(--azul);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  width:36px; height:36px; /* tamaño botón */
+  transition: transform 0.3s ease;
+}
+
+/* Ocultar contenido inicialmente con max-height y transición */
+.acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  padding-left: 1rem;
+  padding-top: 0;
+  border-top: 1px solid #d6d8de;
+}
+
+/* Mostrar contenido cuando está activo */
+.acc-body.active {
+  max-height: 1000px; /* suficientemente alto para mostrar todo */
+  padding-top: 1rem;
+  /* border-top ya aplicado arriba para suavizar borde en el contenido */
+}
+
+.acc-body ul{padding-left:20px;margin:0}
+.acc-body li{margin-bottom:10px}
+.acc-body .nota{margin-top:20px;font-weight:600}
+.rojo{color:#d70000}
+
+/* ------------- PASO 3-4 ------------- */
+.paso-3-4{background:#fff}
+.paso-3-4 h2{font-size:3rem;margin-top:0}
+.paso-3-4 .sub{font-size:1.1rem;color:var(--gris);margin-bottom:60px}
+
+/* ------------- CTA + FORM ------------- */
+.cta-form{background:var(--beige)}
+.cta-grid{display:grid;grid-template-columns:1fr 320px;gap:60px;align-items:start}
+.cta-steps h2{font-size:3.2rem;text-align:center;margin-bottom:40px}
+.step{text-align:center;margin-bottom:50px}
+.step img{width:110px;margin-bottom:18px}
+.step h4{font-size:1.2rem;margin:0 0 10px}
+.step p{max-width:300px;margin:0 auto;font-size:.95rem;color:var(--gris)}
+
+/* formulario */
+.form-box{
+  background:#fff;border:1px solid #d6d8de;border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:14px
+}
+.form-box label{font-weight:600;font-size:.95rem}
+.form-box input[type="text"],
+.form-box input[type="tel"],
+.form-box input[type="email"]{
+  padding:10px;border:1px solid #ccc;border-radius:3px;font-size:1rem
+}
+.form-box .check{display:flex;align-items:center;gap:6px;font-size:.9rem;color:var(--gris)}
+.form-box button{
+  margin-top:10px;padding:12px;border:none;border-radius:4px;
+  background:#008ad4;color:#fff;font-size:1rem;cursor:pointer
+}
+.form-box button:hover{background:#0071ad}
+
+/* ------------- ICON TOGGLE ACTIVE ------------- */
+/* No hace falta si usas JS para cambiar icono */
+
+/* ------------ RESPONSIVE ------------- */
+@media(max-width:1080px){
+  .cta-grid{grid-template-columns:1fr}
+  .form-box{max-width:500px;margin:0 auto}
+}
+@media(max-width:680px){
+  .paso-1 h2{font-size:2.5rem}
+  .paso-3-4 h2{font-size:2.2rem}
+  .container{padding:40px 20px}
+  .acc-header h3{font-size:1.6rem}
+}

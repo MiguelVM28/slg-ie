@@ -1,0 +1,320 @@
+/* ╔════════════════════════════════════════════╗
+   ║                FOOTER NUEVO               ║
+   ╚════════════════════════════════════════════╝ */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    border-radius: 18px;
+    padding: 32px 32px 32px 32px;
+    margin-bottom: 24px;
+}
+.footer-logo img {
+    max-width: 220px;
+    width: 38vw;
+    min-width: 120px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #0002;
+}
+.footer-logo h3 {
+    color: #fff;
+    font-size: 2.3rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.footer-logo p {
+    color: #bfc6e6;
+    font-size: 1.18rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+    max-width: 340px;
+    line-height: 1.6;
+    margin: 0;
+}
+@media (max-width: 700px) {
+    .footer-logo {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 8px;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo img {
+        width: 60vw;
+        max-width: 180px;
+        min-width: 80px;
+    }
+    .footer-logo h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    .footer-logo p {
+        font-size: 1rem;
+        max-width: 98vw;
+    }
+}
+/* ╔════════════════════════════════════════════╗
+   ║        HERO  —  NIVEL SECUNDARIA          ║
+   ╚════════════════════════════════════════════╝ */
+.hero-nivel-secundaria{
+    width:100%;
+    background:#123b6e;
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    margin:0 auto;
+    padding:0;
+    overflow:hidden;
+}
+.hero-nivel-secundaria .hero-content{
+    display:flex;
+    width:100%;
+    max-width:1400px;
+    min-height:300px;
+}
+.hero-nivel-secundaria .hero-bg{
+    flex:1;
+    background:
+        url("../img/bg-formas.svg") center/cover no-repeat,
+        #123b6e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 0;
+}
+.hero-nivel-secundaria .hero-bg h1{
+    color:#fff;
+    font:700 3.2rem/1.2 "Georgia",serif;
+    margin:0;
+    text-align:center;
+}
+.hero-nivel-secundaria .hero-img{
+    flex:1;
+    background:#f3f3f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.hero-nivel-secundaria .hero-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+@media(max-width:900px){
+    .hero-nivel-secundaria .hero-content{flex-direction:column;}
+    .hero-nivel-secundaria .hero-bg,
+    .hero-nivel-secundaria .hero-img{padding:20px;}
+    .hero-nivel-secundaria .hero-bg h1{font-size:2rem;}
+    .hero-nivel-secundaria .hero-img img{max-height:180px;}
+}
+
+/* ╔════════════════════════════════════════════╗
+   ║           CONTENEDORES GENERALES          ║
+   ╚════════════════════════════════════════════╝ */
+body{
+    font-family:'Segoe UI',sans-serif;
+    line-height:1.6;
+    margin:0;
+    color:#222;
+    background:#fff;
+}
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0px 40px;
+    box-sizing:border-box;
+}
+h2{
+    font:700 3rem "Georgia",serif;
+    text-align:center;
+    margin-bottom:20px;
+}
+p.intro{
+    max-width:840px;
+    margin:0 auto 10px;
+    font-size:1.1rem;
+    text-align:center;
+}
+
+/* ╔════════════════════════════════════════════╗
+   ║          PROPUESTA EDUCATIVA              ║
+   ╚════════════════════════════════════════════╝ */
+.propuesta{background:#f9f9f9;padding:60px 0;}
+.habilidades{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:30px;
+}
+.hab-card{
+    display:flex;flex-direction:column;align-items:center;width:120px;text-align:center;
+}
+.hab-icon{
+    font-size:2rem;color:#fff;padding:20px;border-radius:50%;margin-bottom:10px;
+}
+.hab-text{font-size:.95rem;font-weight:500}
+.bg-orange{background:#f39c12}
+.bg-purple{background:#9b59b6}
+.bg-green {background:#27ae60}
+.bg-sky   {background:#3498db}
+.bg-blue  {background:#2980b9}
+.bg-pink  {background:#e74c3c}
+
+/* ╔════════════════════════════════════════════╗
+   ║            METODOLOGÍA & AULAS            ║
+   ╚════════════════════════════════════════════╝ */
+.metodologia{background:#fcf8f5;padding:50px 0;}
+.metodologia .container>h2{text-align:left;}
+.metodologia p{max-width:840px;font-size:1rem;line-height:1.7}
+.aulas-flex{
+    display:flex;flex-wrap:wrap;gap:30px;align-items:center;margin-top:30px;
+}
+.aulas-flex ul{flex:1 350px;min-width:300px;padding-left:100px;line-height:1.8}
+.aulas-flex figure{flex:1 1 320px;min-width:300px;margin:0}
+.aulas-flex img{width:100%;border-radius:10px;box-shadow:0 4px 10px #0001}
+
+/* ╔════════════════════════════════════════════╗
+   ║          ACTIVIDADES / PROYECTOS          ║
+   ╚════════════════════════════════════════════╝ */
+.actividades{background:#fff;padding:40px 0;}
+.grid-actividades{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:50px;margin-top:30px;
+}
+.grid-actividades ul{list-style:none;padding:0;min-width:260px}
+.grid-actividades li{
+    font-size:1rem;margin-bottom:12px;display:flex;align-items:center;
+}
+.plus{
+    display:inline-block;width:25px;height:25px;
+    border-radius:50%;background:#123b6e;color:#fff;
+    text-align:center;line-height:25px;font-weight:700;
+    margin-right:10px;
+}
+
+/* ╔════════════════════════════════════════════╗
+   ║                 RESPONSIVE                ║
+   ╚════════════════════════════════════════════╝ */
+@media(max-width:900px){
+    .container{padding:0 10px;}
+    .habilidades{gap:16px;}
+    .aulas-flex{flex-direction:column;gap:18px;}
+    .aulas-flex ul,.aulas-flex figure{min-width:0;width:100%;}
+    .grid-actividades{gap:18px;}
+    .grid-actividades ul{min-width:0;width:100%;}
+}
+
+@media(max-width:600px){
+    h2{font-size:1.2rem}
+    .container{padding:0 2vw;}
+    .hab-card{width:100px;}
+    .aulas-flex ul,.aulas-flex figure{padding:0;}
+    .aulas-flex img{max-width:100%;}
+    .grid-actividades li{font-size:0.95rem;}
+}
+/* ╔════════════════════════════════════════════╗
+   ║                 FOOTER                    ║
+   ╚════════════════════════════════════════════╝ */
+.footer{
+    background:#07082a;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+    font-size:1rem;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0px 0px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:4rem;
+    align-items:flex-start;
+}
+
+/* ── Columna Logo + texto corto ────────────── */
+.footer-logo{
+    flex:0 0 220px;
+    text-align:center;
+}
+.footer-logo img{
+    width:240px;
+    margin-bottom:40px;
+}
+.footer-logo h3{
+    font-size:1.4rem;
+    font-weight:700;
+    margin:0 0 10px;
+}
+.footer-logo p{margin:0;font-size:.95rem;line-height:1.6}
+
+/* ── Enlaces ───────────────────────────────── */
+.footer-links{
+    flex:1 1 200px;
+}
+.footer-links h4{
+    font-size:1.2rem;
+    font-weight:700;
+    margin:0 0 15px;
+}
+.footer-links ul{list-style:none;margin:0;padding:0}
+.footer-links li{
+    margin:0 0 .8rem;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:1rem;
+}
+.footer-links li i{
+    font-size:.55rem;
+    color:#7685ff;
+}
+
+/* ── Contacto ──────────────────────────────── */
+.footer-contacto{
+    flex:1 1 220px;
+}
+.footer-contacto h4{
+    font-size:1.2rem;
+    font-weight:700;
+    margin:0 0 15px;
+}
+.footer-contacto ul{list-style:none;margin:0;padding:0}
+.footer-contacto li{
+    margin:0 0 .9rem;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.footer-contacto i{color:#e74c3c}
+.footer-redes{
+    display:flex;
+    gap:20px;
+    margin-top:8px;
+}
+.footer-redes a{
+    color:#fff;
+    font-size:1.3rem;
+    transition:color .3s;
+}
+.footer-redes a:hover{color:#f9b233}
+
+/* ═════ RESPONSIVE ═════ */
+@media(max-width:1024px){
+    .footer-container{gap:2rem}
+    .footer-logo{flex:0 0 180px}
+    .footer-logo img{width:180px}
+}
+@media(max-width:640px){
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
+    .footer-links,
+    .footer-contacto{flex:none;width:100%}
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+}
